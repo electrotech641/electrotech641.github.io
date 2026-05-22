@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic & Professional Portfolio</title>
+    <style>
+        /* Modern Minimalist CSS Variable Theme */
+        :root {
+            --primary: #1e293b;
+            --secondary: #2563eb;
+            --background: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+            --text-light: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background);
+            color: var(--text);
+        }
+
+        /* Sticky Navigation Bar - UI/UX Best Practice */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        nav h1 {
+            font-size: 1.25rem;
+            color: var(--primary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        /* Main Container layout */
+        main {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 5rem; /* Prevents sticky nav covering headers on click */
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Hero / Introduction */
+        .hero {
+            background-color: var(--primary);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .hero h2 {
+            border: none;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Grid for Course Submissions */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Video Container - Aspect Ratio Fix */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-top: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Professional Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            text-align: center;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--secondary);
+            border: 1px solid var(--secondary);
+            margin-left: 0.5rem;
+        }
+
+        .btn-outline:hover {
+            background-color: #eff6ff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>Your Name | Course Portfolio</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#code-review">Code Review</a></li>
+                <li><a href="#submissions">Submissions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About / Intro Section -->
+        <section id="about" class="hero">
+            <h2>Course Capstone & Artifact Portfolio</h2>
+            <p>Welcome to my professional showcase. This site compiles all project materials, documentation, and source code completed throughout the course curriculum.</p>
+        </section>
+
+        <!-- Video Code Review Section (UX: Big files hosted on YouTube) -->
+        <section id="code-review">
+            <h2>Code Review Video</h2>
+            <p>Below is the detailed walkthrough of my software architecture, design patterns, and code optimization strategies. You can watch it directly or view the source repository.</p>
+            
+            <!-- Replace the YouTube URL with your video ID -->
+            <div class="video-container">
+                <iframe src="https://youtube.com" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div style="margin-top: 1.5rem;">
+                <a href="https://youtube.com" target="_blank" class="btn">Watch on YouTube</a>
+                <a href="https://github.com" target="_blank" class="btn btn-outline">View Reviewed Code Base</a>
+            </div>
+        </section>
+
+        <!-- Course Deliverables Grid -->
+        <section id="submissions">
+            <h2>Course Submissions & Artifacts</h2>
+            <div class="grid">
+                
+                <!-- Project Artifact 1 -->
+                <div class="card">
+                    <div>
+                        <h3>Artifact 1: Software Design</h3>
+                        <p>A comprehensive system overview highlighting data structures, algorithm efficiency, and object-oriented design implementation.</p>
+                    </div>
+                    <div>
+                        <!-- Links point directly to files stored within your repo folders -->
+                        <a href="./artifacts/design-document.pdf" class="btn" download>Download PDF</a>
+                        <a href="https://github.com" class="btn btn-outline">View Code</a>
+                    </div>
+                </div>
+
+                <!-- Project Artifact 2 -->
+                <div class="card">
+                    <div>
+                        <h3>Artifact 2: Algorithms & Data Structures</h3>
+                        <p>Refactored logic demonstrating optimized search/sort parameters and memory management improvements.</p>
+                    </div>
+                    <div>
+                        <a href="./artifacts/algorithms-writeup.pdf" class="btn" download>Download PDF</a>
+                        <a href="https://github.com" class="btn btn-outline">View Code</a>
+                    </div>
+                </div>
+
+                <!-- Project Artifact 3 -->
+                <div class="card">
+                    <div>
+                        <h3>Artifact 3: Databases</h3>
+                        <p>Database schema enhancements, CRUD operations scripting, and security hardening procedures.</p>
+                    </div>
+                    <div>
+                        <a href="./artifacts/database-schema.pdf" class="btn" download>Download PDF</a>
+                        <a href="https://github.com" class="btn btn-outline">View Code</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Your Name. Submitted for Course Title requirements.</p>
+    </footer>
+
+</body>
+</html>
