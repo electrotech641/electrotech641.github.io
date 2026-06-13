@@ -120,6 +120,20 @@
             justify-content: space-between;
         }
 
+        /* Align buttons cleanly at bottom of each card */
+        .card > div:last-child {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .card a.btn,
+        .card a.btn-outline {
+            width: 100%;
+            text-align: center;
+        }
+
         .card h3 {
             color: var(--primary);
             margin-bottom: 0.5rem;
@@ -172,7 +186,7 @@
             background-color: transparent;
             color: var(--secondary);
             border: 1px solid var(--secondary);
-            margin-left: 0.5rem;
+            margin-left: 0;
         }
 
         .btn-outline:hover {
